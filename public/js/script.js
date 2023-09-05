@@ -6,7 +6,7 @@ async function getRandomFact() {
 
     randomizeButton.disabled = true;
 
-    const response = await fetch("https://meowfacts.herokuapp.com/?lang=" + lang);
+    const response = await fetch("https://meowfacts.herokuapp.com/?lang=" + lang, { method: 'GET', mode: 'no-cors' });
     const factResponse = await response.json();
     const fact = factResponse.data[0];
 
@@ -19,7 +19,7 @@ async function getRandomFact() {
 
     factsContainer.appendChild(divFact)
 
-    setTimeout( () => {
+    setTimeout(() => {
         randomizeButton.disabled = false;
     }, 1000)
 }
