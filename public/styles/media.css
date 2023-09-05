@@ -1,0 +1,31 @@
+@media (max-width: 450px) {
+    header a h3 {
+        display: none;
+    }
+
+    .introduction img {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .introduction {
+        flex-direction: column;
+    }
+
+    .introduction h1 {
+        font-size: x-large;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .facts-header .select {
+        display: none;
+    }
+
+    main {
+        margin: 2rem 1rem;
+    }
+    
+}
