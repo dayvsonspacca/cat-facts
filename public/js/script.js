@@ -6,11 +6,11 @@ async function getRandomFact() {
 
     randomizeButton.disabled = true;
 
-    const response = await fetch("https://meowfacts.herokuapp.com/?lang=" + lang, { method: 'GET', mode: 'no-cors' });
+    const response = await fetch("https://catfact.ninja/fact");
     const factResponse = await response.json();
-    const fact = factResponse.data[0];
+    const fact = factResponse.fact;
 
-    const factsContainer = document.getElementById('facts');
+    const factsContainer = document.getElementById('facts', { method: 'GET', mode: 'no-cors' });
 
     let divFact = document.createElement('div');
 
