@@ -6,11 +6,11 @@ async function getRandomFact() {
 
     randomizeButton.disabled = true;
 
-    const response = await fetch("https://catfact.ninja/fact");
+    const response = await fetch("https://catfact.ninja/fact", { method: 'GET', mode: 'no-cors' });
     const factResponse = await response.json();
     const fact = factResponse.fact;
 
-    const factsContainer = document.getElementById('facts', { method: 'GET', mode: 'no-cors' });
+    const factsContainer = document.getElementById('facts');
 
     let divFact = document.createElement('div');
 
